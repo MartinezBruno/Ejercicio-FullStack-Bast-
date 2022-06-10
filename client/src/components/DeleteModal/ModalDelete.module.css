@@ -1,0 +1,56 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  width: 500px;
+  background-color: #fff;
+}
+
+.modalHeader,
+.modalFooter {
+  padding: 10px;
+}
+
+.modalTitle {
+  margin: 0;
+}
+
+.modalBody {
+  margin: 10px 0;
+  padding: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+}
+
+.modalDeleteButton {
+  font-size: 1.1rem;
+  background-color: #ff0404;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  border: 1px solid #95b147;
+  border-radius: 5px;
+}
+
+.modalCloseButton {
+  font-size: 1.1rem;
+  background-color: #95b147;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  border: 1px solid #95b147;
+  border-radius: 5px;
+}

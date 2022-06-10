@@ -1,0 +1,110 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  width: 500px;
+  background-color: #fff;
+}
+
+.modalHeader,
+.modalFooter {
+  padding: 10px;
+}
+
+.modalTitle {
+  margin: 0;
+}
+
+.modalBody {
+  margin: 10px 0;
+  padding: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+}
+
+.modalFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.modalCloseButton {
+  font-size: 1.1rem;
+  background-color: #ff0404;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  border: 1px solid #95b147;
+  border-radius: 5px;
+}
+.modalSendButton {
+  font-size: 1.1rem;
+  background-color: #95b147;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: 1px solid #95b147;
+  border-radius: 5px;
+}
+
+.inputGroup {
+  position: relative;
+  margin: 10px 0;
+}
+.input {
+  font: inherit;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  outline: none;
+  padding-block: 5px;
+}
+.input::placeholder {
+  color: inherit;
+  transition: opacity 0.25s;
+}
+.input:focus::placeholder {
+  opacity: 0;
+}
+.borderBottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #95b147;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+.input:focus + .borderBottom,
+.input:valid + .borderBottom {
+  transform: scaleX(1);
+}
+
+.borderBottom > .error {
+  font-size: xx-small;
+  position: absolute;
+  left: 0;
+  bottom: -0.8rem;
+  color: #ff0404;
+}
+
+.info {
+  font-size: x-small;
+  opacity: 0.5;
+  margin-left: 1rem;
+}
