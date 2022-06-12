@@ -75,10 +75,6 @@ const updateAnimal = (req, res) => {
 // It finds an animal by its id and deletes it
 const deleteAnimal = async (req, res) => {
   const { id } = req.params
-  // Cattle.findByIdAndDelete(id)
-  //   .then(animal => res.status(204).send(animal))
-  //   .catch(err => {
-  //   })
   try {
     const animal = await Cattle.findByIdAndDelete(id)
     if (animal === null) return res.sendStatus(404)

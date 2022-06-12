@@ -37,7 +37,7 @@ const List = ({ cattle }) => {
               <th>Acciones</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody >
             {cattle.map(animal => (
               <tr key={animal.id}>
                 <td>{animal.idSenasa}</td>
