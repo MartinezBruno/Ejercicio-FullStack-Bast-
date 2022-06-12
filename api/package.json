@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon ./src/index.js",
-    "test": "jest --verbose --silent --detectOpenHandles tests/cattle.test.js",
+    "test": "jest --verbose --silent tests/cattle.test.js",
     "test:watch": "npm run test -- --watch"
   },
   "keywords": [],

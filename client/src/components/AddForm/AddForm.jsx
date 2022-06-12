@@ -7,7 +7,7 @@ const AddForm = ({ show, onClose }) => {
     idSenasa: '',
     animalType: '',
     weight: '',
-    potrero: '',
+    name: '',
     device: '',
     deviceNumber: '',
   })
@@ -29,10 +29,10 @@ const AddForm = ({ show, onClose }) => {
     if (!input.weight) {
       error.weight = 'El peso es requerido'
     }
-    if (!input.potrero) {
-      error.potrero = 'El nombre es requerido'
-    } else if (!regex.test(input.potrero)) {
-      error.potrero = 'El nombre debe ser alfanumérico'
+    if (!input.name) {
+      error.name = 'El nombre es requerido'
+    } else if (!regex.test(input.name)) {
+      error.name = 'El nombre debe ser alfanumérico'
     }
     if (!input.device) {
       error.device = 'El dispositivo es requerido'
@@ -135,12 +135,12 @@ const AddForm = ({ show, onClose }) => {
                 autoComplete='off'
                 type='text'
                 placeholder='Nombre de potrero'
-                name='potrero'
+                name='name'
                 className={styles.input}
                 required
                 onChange={handleOnChange}
               />
-              <span className={styles.borderBottom}>{error.potrero && <span className={styles.error}>{error.potrero}</span>}</span>
+              <span className={styles.borderBottom}>{error.name && <span className={styles.error}>{error.name}</span>}</span>
             </div>
             <div className={styles.inputGroup}>
               <select defaultValue={''} type='text' placeholder='Tipo de dispositivo' name='device' className={styles.input} required onChange={handleOnChange}>

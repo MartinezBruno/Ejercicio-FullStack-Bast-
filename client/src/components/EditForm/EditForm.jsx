@@ -7,7 +7,7 @@ const EditForm = ({ show, onClose, cattle }) => {
     idSenasa: cattle.idSenasa,
     animalType: cattle.animalType,
     weight: cattle.weight,
-    potrero: cattle.name,
+    name: cattle.name,
     device: cattle.device,
     deviceNumber: cattle.deviceNumber,
   })
@@ -23,8 +23,8 @@ const EditForm = ({ show, onClose, cattle }) => {
     if (!regex.test(input.idSenasa)) {
       error.idSenasa = 'El idSenasa debe ser alfanumérico'
     }
-    if (!regexLetters.test(input.potrero)) {
-      error.potrero = 'El nombre debe contener unicamente letras'
+    if (!regexLetters.test(input.name)) {
+      error.name = 'El nombre debe contener unicamente letras'
     }
     if (!regex.test(input.deviceNumber)) {
       error.deviceNumber = 'El numero de dispositivo debe ser alfanumérico'
@@ -129,12 +129,12 @@ const EditForm = ({ show, onClose, cattle }) => {
                 type='text'
                 placeholder='Nombre de potrero'
                 maxLength='200'
-                name='potrero'
+                name='name'
                 className={styles.input}
                 required
                 onChange={handleOnChange}
               />
-              <span className={styles.borderBottom}>{error.potrero && <span className={styles.error}>{error.potrero}</span>}</span>
+              <span className={styles.borderBottom}>{error.name && <span className={styles.error}>{error.name}</span>}</span>
             </div>
             <div className={styles.inputGroup}>
               <select defaultValue={''} type='text' placeholder='Tipo de dispositivo' name='device' className={styles.input} required onChange={handleOnChange}>
@@ -162,7 +162,7 @@ const EditForm = ({ show, onClose, cattle }) => {
           </form>
         </div>
         <div className={styles.modalFooter}>
-          {input.idSenasa.length > 1 && !error.idSenasa && !error.potrero && !error.deviceNumber ? (
+          {input.idSenasa.length > 1 && !error.idSenasa && !error.name && !error.deviceNumber ? (
             <button className={styles.modalSendButton} onClick={handleSubmit}>
               Enviar
             </button>
