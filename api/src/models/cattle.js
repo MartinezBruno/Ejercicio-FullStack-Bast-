@@ -4,6 +4,7 @@ const cattleSchema = new Schema({
   idSenasa: {
     type: String,
     maxlength: 16,
+    required: true,
   },
   animalType: {
     type: String,
@@ -24,6 +25,7 @@ const cattleSchema = new Schema({
   deviceNumber: {
     type: String,
     maxlength: 8,
+    required: true,
   },
 })
 

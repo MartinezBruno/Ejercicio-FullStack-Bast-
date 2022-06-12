@@ -4,16 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon ./src/index.js",
+    "test": "jest --verbose --silent --detectOpenHandles tests/cattle.test.js",
+    "test:watch": "npm run test -- --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
-    "mongoose": "^6.3.6",
-    "morgan": "^1.10.0"
+    "jest": "^28.1.1",
+    "mongoose": "5.11.18",
+    "morgan": "^1.10.0",
+    "supertest": "^6.1.3"
   },
   "devDependencies": {
     "eslint": "^8.17.0",

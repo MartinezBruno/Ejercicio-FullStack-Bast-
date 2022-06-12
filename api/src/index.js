@@ -1,3 +1,5 @@
+require('../index')
+
 const express = require('express')
 const morgan = require('morgan')
 const routes = require('./routes/index')
@@ -27,4 +29,6 @@ app.use((err, req, res, next) => {
   res.status(status).send(message)
 })
 
-module.exports = app
+const server = app.listen(3001, () => console.log('Listening on port 3001'))
+
+module.exports = { app, server }
