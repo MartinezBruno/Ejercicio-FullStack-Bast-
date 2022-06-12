@@ -13,5 +13,5 @@
 
 - The first step is intall all the dependencies, te do this do\
 `npm install` in the client folder
-- The next step is run the client, you can do it by running `npm start`
-- To run all the tests do `npm run test` (Make sure to keep running your BackEnd)
+- The next step is run the client, you can do it by running `npm start`  (Make sure to keep running your BackEnd)
+- To run all the tests do `npm run test`
