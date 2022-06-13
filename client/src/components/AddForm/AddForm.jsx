@@ -17,6 +17,8 @@ const AddForm = ({ show, onClose }) => {
     let error = {}
     //regex for alphanumeric values
     const regex = /^[a-zA-Z0-9]+$/
+    //regex for letters only
+    const regexLetters = /^[a-zA-Z]+$/
 
     if (!input.idSenasa) {
       error.idSenasa = 'El idSenasa es requerido'
@@ -31,8 +33,8 @@ const AddForm = ({ show, onClose }) => {
     }
     if (!input.name) {
       error.name = 'El nombre es requerido'
-    } else if (!regex.test(input.name)) {
-      error.name = 'El nombre debe ser alfanumérico'
+    } else if (!regexLetters.test(input.name)) {
+      error.name = 'El nombre debe contener unicamente letras'
     }
     if (!input.device) {
       error.device = 'El dispositivo es requerido'
@@ -97,6 +99,7 @@ const AddForm = ({ show, onClose }) => {
                 maxLength='16'
                 required
                 onChange={handleOnChange}
+                value={input.idSenasa}
               />
               <span className={styles.borderBottom}>{error.idSenasa && <span className={styles.error}>{error.idSenasa}</span>}</span>
             </div>
@@ -108,7 +111,8 @@ const AddForm = ({ show, onClose }) => {
                 name='animalType'
                 className={styles.input}
                 required
-                onChange={handleOnChange}>
+                onChange={handleOnChange}
+                value={input.animalType}>
                 <option value='' disabled>
                   Seleccione tipo de animal
                 </option>
@@ -124,26 +128,28 @@ const AddForm = ({ show, onClose }) => {
                 type='number'
                 placeholder='Peso del Animal en kg'
                 name='weight'
+                min='0'
                 className={styles.input}
                 required
                 onChange={handleOnChange}
+                value={input.weight}
               />
               <span className={styles.borderBottom}>{error.weight && <span className={styles.error}>{error.weight}</span>}</span>
             </div>
             <div className={styles.inputGroup}>
-              <input
-                autoComplete='off'
-                type='text'
-                placeholder='Nombre de potrero'
-                name='name'
-                className={styles.input}
-                required
-                onChange={handleOnChange}
-              />
+              <input autoComplete='off' type='text' placeholder='Nombre de potrero' name='name' className={styles.input} required onChange={handleOnChange} />
               <span className={styles.borderBottom}>{error.name && <span className={styles.error}>{error.name}</span>}</span>
             </div>
             <div className={styles.inputGroup}>
-              <select defaultValue={''} type='text' placeholder='Tipo de dispositivo' name='device' className={styles.input} required onChange={handleOnChange}>
+              <select
+                defaultValue={''}
+                type='text'
+                placeholder='Tipo de dispositivo'
+                name='device'
+                className={styles.input}
+                required
+                onChange={handleOnChange}
+                value={input.device}>
                 <option value='' disabled>
                   Seleccione tipo de dispositivo
                 </option>
@@ -162,6 +168,7 @@ const AddForm = ({ show, onClose }) => {
                 required
                 maxLength='8'
                 onChange={handleOnChange}
+                value={input.deviceNumber}
               />
               <span className={styles.borderBottom}>{error.deviceNumber && <span className={styles.error}>{error.deviceNumber}</span>}</span>
             </div>

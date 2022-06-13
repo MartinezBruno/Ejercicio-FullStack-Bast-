@@ -3,7 +3,7 @@
 
 ### BackEnd (api)
 
-- The first step is intall all the dependencies, te do this do\
+- The first step is install all the dependencies, to do this do\
 `npm install` in the api folder
 - To start using the API do `npm run dev`
 - To run all the tests do `npm run test`

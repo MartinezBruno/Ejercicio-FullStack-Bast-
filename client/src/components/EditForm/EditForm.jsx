@@ -90,6 +90,7 @@ const EditForm = ({ show, onClose, cattle }) => {
                 maxLength='16'
                 required
                 onChange={handleOnChange}
+                value={input.idSenasa}
               />
               <span className={styles.borderBottom}>{error.idSenasa && <span className={styles.error}>{error.idSenasa}</span>}</span>
             </div>
@@ -101,7 +102,9 @@ const EditForm = ({ show, onClose, cattle }) => {
                 name='animalType'
                 className={styles.input}
                 required
-                onChange={handleOnChange}>
+                onChange={handleOnChange}
+                value={input.animalType}
+              >
                 <option value='' disabled>
                   Seleccione tipo de animal
                 </option>
@@ -117,9 +120,11 @@ const EditForm = ({ show, onClose, cattle }) => {
                 type='number'
                 placeholder='Peso del Animal en kg'
                 name='weight'
+                min='0'
                 className={styles.input}
                 required
                 onChange={handleOnChange}
+                value={input.weight}
               />
               <span className={styles.borderBottom}></span>
             </div>
@@ -133,11 +138,12 @@ const EditForm = ({ show, onClose, cattle }) => {
                 className={styles.input}
                 required
                 onChange={handleOnChange}
+                value={input.name}
               />
               <span className={styles.borderBottom}>{error.name && <span className={styles.error}>{error.name}</span>}</span>
             </div>
             <div className={styles.inputGroup}>
-              <select defaultValue={''} type='text' placeholder='Tipo de dispositivo' name='device' className={styles.input} required onChange={handleOnChange}>
+              <select defaultValue={''} type='text' placeholder='Tipo de dispositivo' name='device' className={styles.input} required onChange={handleOnChange} value={input.device}>
                 <option value='' disabled>
                   Seleccione tipo de dispositivo
                 </option>
@@ -156,6 +162,7 @@ const EditForm = ({ show, onClose, cattle }) => {
                 required
                 maxLength='8'
                 onChange={handleOnChange}
+                value={input.deviceNumber}
               />
               <span className={styles.borderBottom}>{error.deviceNumber && <span className={styles.error}>{error.deviceNumber}</span>}</span>
             </div>
