@@ -31,7 +31,7 @@
 
 ### FrontEnd (client)
 
-- The first step is intall all the dependencies, te do this do\
+- The first step is install all the dependencies, to do this do\
 `npm install` in the client folder
 - The next step is run the client, you can do it by running `npm start`  (Make sure to keep running your BackEnd)
 - To run all the tests do `npm run test`
