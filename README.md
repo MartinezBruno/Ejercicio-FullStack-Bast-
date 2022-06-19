@@ -14,12 +14,12 @@
 2. `GET http://localhost:3001/api/cattle?name=${name}` It will return all the Potreros in the DataBase that matches with the given Name
 3. `GET http://localhost:3001/api/cattle/:id` It will return a single animal that matches with the given ID
 4. `POST http://localhost:3001/api/cattle` It will create a new animal, you can send the data in this format: 
-``` 
+```
  {
     idSenasa: 'sffsdhj453ed4rhm',
     animalType: 'toro',
     weight: 130,
-    name: 'Fede',
+    name: 'Juancito',
     device: 'caravana',
     deviceNumber: '1235sd78',
   }
